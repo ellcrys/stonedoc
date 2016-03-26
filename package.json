@@ -13,5 +13,8 @@
     "gulp-rename": "^1.2.2",
     "inflate-nunj": "0.0.1",
     "load-grunt-tasks": "~0.2.0"
+  },
+  "dependencies": {
+    "node-static": "^0.7.7"
   }
 }
