@@ -1,0 +1,50 @@
+<div class="header" id="ownership">Ownership Block</div>
+<div class="main-content">
+	This block contains information about the ownership of a stone instance. 
+	The host uses this block to store and determine ownership of an asset by associating 
+	the stone with an address hosted with it. 
+	<br> <br>
+
+	Only the address owner who has access to the address's private
+	key can authorize transactions against a stone belonging to it's address.
+	<br><br>
+
+	This block is optional. Only required when a host is needed to manage asset
+	ownership. Otherwise, issuers can simply transfer unowned stones.
+</div>
+
+<div class="codeblock">
+	<div class="title"><b>Structure of an ownership block</b></div>
+	<div class="main-content" style="padding-top: 0px;">
+		<pre>
+			<code class="json">
+{
+   "ref_id":  "jh88hg3sxn43isjhdg0jsdjie03cu3",
+   "type":    "sole",
+   "sole": {
+      "address_id": "jf8asdjji904fcn09jtunc909du3nec0envu9rg9"
+   }
+}
+			</code>
+		</pre>
+	</div>
+</div>
+
+<div class="main-content" style="padding-top: 0px;">
+	
+	<b>ref_id</b> (string): This is the id of the stone (<code>meta.id</code>) where the ownership block
+	is included. If the value is not the equal to <code>meta.id</code>, the block is considered invalid.
+	<br><br>
+
+	<b>type</b> (string): This is the type of ownership. Only sole ownership is currently supported.
+	Expected value should be <code>sole</code>.
+	<br><br>
+
+	<b>sole</b> (object): Optional. This object contains information about the address that owns 
+	the stone. This is required when <code>ownership.type</code> is set to <code>sole</code>.
+	<br><br>
+
+	<b>sole.address_id</b> (string): This is the address id associated with the stone instance. 
+	Only signatures signed with the private key of this address will be accepted by the host.
+
+</div>

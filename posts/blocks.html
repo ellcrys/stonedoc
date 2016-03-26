@@ -1,0 +1,74 @@
+<div class="header" id="blocks">Blocks</div>
+<div class="main-content">
+	A stone is represented in JSON format. It is made up of five properties know as "blocks". 
+	The names of these blocks are 
+	<b>meta</b>, <b>ownership</b>, <b>attributes</b>, <b>embeds</b> and <b>signatures</b>.
+	<br>
+
+</div>
+
+<div class="codeblock">
+	<div class="title"><b>Structure of a stone object</b></div>
+	<div class="main-content" style="padding-top: 0px;">
+		<pre>
+			<code class="json">
+{
+   "meta":       	{},
+   "ownership":  	{},
+   "attributes": 	{},
+   "embeds":	 	{},
+   "signatures": 	{}
+}
+			</code>
+		</pre>
+	</div>
+</div>
+
+<div class="main-content" style="padding-top: 0px;">
+	
+	<b>Meta</b>: The meta block is where the header information
+	about the stone and it's issuer is stored. This block must be signed by
+	the issuer during creation.
+	<br><br>
+
+	<b>Ownership</b>: An optional block for describing ownership. This block is used
+	by the host to determine and describe ownership. It must be signed by the host.
+	<br><br>
+
+	<b>Attributes</b>: This is the only place an issuer can store arbitrary data about a
+	stone instance. It must be signed by the issuer.
+	<br><br>
+
+	<b>Embeds</b>: To support complex stones, this block allows the issuer
+	to include one or more stones inside of a stone. This is suitable for assets that 
+	also come with additional assets. This block must be signed by the issuer.
+	<br><br>
+
+	<b>Signatures</b>: This is where the JWS signatures of the other blocks is
+	stored. It is also the block that gets base64 encoded to make up the final stone token. 
+	<br><br>
+
+	Each block accepts an object containing expected properties. For a stone
+	to be considered valid, all blocks must pass validation checks. The signatures block
+	is excluded from the signing and verification processes. 
+	<br><br>
+
+</div>
+
+	<div class="codeblock">
+	<div class="title"><b>Structure of a signatures block</b></div>
+	<div class="main-content" style="padding-top: 0px;">
+		<pre>
+			<code class="json">
+{
+   "meta":       	"xxxxxxxx",
+   "ownership":  	"xxxxxxxx",
+   "attributes": 	"xxxxxxxx",
+   "embeds":	 	"xxxxxxxx"
+}
+			</code>
+		</pre>
+	</div>
+</div>
+
+

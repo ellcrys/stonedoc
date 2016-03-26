@@ -1,0 +1,34 @@
+<div class="header" id="attributes">Attributes Block</div>
+<div class="main-content">
+	
+	This is an optional block provided for issuers to include arbitrary data into 
+	the stone. Data included can be of any JSON data type. This block must be
+	signed by the isser of the asset.
+
+</div>
+
+<div class="codeblock">
+	<div class="title"><b>Structure of an ownership block</b></div>
+	<div class="main-content" style="padding-top: 0px;">
+		<pre>
+			<code class="json">
+{
+   "ref_id":  "jh88hg3sxn43isjhdg0jsdjie03cu3",
+   "data": "data of any JSON type"
+}
+			</code>
+		</pre>
+	</div>
+</div>
+
+<div class="main-content" style="padding-top: 0px;">
+	
+	<b>ref_id</b> (string): This is the id of the stone (<code>meta.id</code>) where the ownership block
+	is included. If the value is not the equal to <code>meta.id</code>, the block is considered invalid.
+	<br><br>
+
+	<b>data</b> (any): This field holds any issuer data. The value type can be
+	string, number, JSON object or an array.
+	<br><br>
+
+</div>

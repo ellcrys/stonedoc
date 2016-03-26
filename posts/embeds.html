@@ -1,0 +1,52 @@
+<div class="header" id="embeds-block">Embeds Block</div>
+<div class="main-content">
+	To accomodate complex hierarchy of related assets, the embeds blocks
+	allows multiple stones to be included in another stone. 
+</div>
+
+<div class="codeblock">
+	<div class="title"><b>Structure of an ownership block</b></div>
+	<div class="main-content" style="padding-top: 0px;">
+		<pre>
+			<code class="json">
+{
+   "ref_id":  "uahftaxnfajh88hg3sxn43isjhdg0jsdjie03cu3",
+   "data": [
+      {
+         "meta": {
+            "id": "h52kavcta6SVjdh738jfgsfijebsfhgjufkskdd",
+            "type": "receipt",
+            "created_at": 1458623859
+         }
+      },
+      {
+         "meta": {
+            "id": "h52kavcta6SVjdh738jfgsfijebsfhgjufksjjj",
+            "type": "bitcoin",
+            "created_at": 1458623859
+         },
+         "ownership": {
+            "ref_id": "h52kavcta6SVjdh738jfgsfijebsfhgjufksjjj",
+            "type": "sole",
+            "sole": {
+               "address_id": "774hhgd888yby7rby7b88t900st93jsa"
+            }
+         }
+      }
+   ]
+}
+			</code>
+		</pre>
+	</div>
+</div>
+
+<div class="main-content" style="padding-top: 0px;">
+	
+	<b>ref_id</b> (string): This is the id of the stone (<code>meta.id</code>) where the ownership block
+	is included. If the value is not the equal to <code>meta.id</code>, the block is considered invalid.
+	<br><br>
+
+	<b>data</b> (array): This must contain valid stone objects only. 
+	<br><br>
+
+</div>

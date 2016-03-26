@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		{# <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> #}
+		<!-- <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css" crossorigin="anonymous"> -->
+		<link rel="stylesheet" href="/css/bootstrap.css" crossorigin="anonymous">
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/mono-blue.css">
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/atelier-lakeside-dark.min.css">
+		<script src="/js/highlight.pack.js" crossorigin="anonymous"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
+	</head>
+  	<body>
+  		
+  		<div class="container-fluid rm-gutter">
+	
+			<div class="sidebar">
+				<div class="logo-panel">
+					<img src="/img/logo_white.png" alt="">
+				</div>
+				<div class="links">
+					<ul class="list-unstyled">
+						<li><a href="#">Introduction</a></li>
+						<li class="sub-menu">
+							<ul class="list-unstyled">
+								<li><a href="#">What is a Stone</a></li>
+								<li><a href="#">What is a Host</a></li>
+								<li><a href="#">Why Stone</a></li>
+								<li><a href="#">Address</a></li>
+								<li><a href="#">Issuer</a></li>
+								{# <li><a href="#">Asset</a></li> #}
+							</ul>
+						</li>
+					</ul>
+
+					<ul class="list-unstyled">
+						<li><a href="#">Anatomy</a></li>
+						<li class="sub-menu">
+							<ul class="list-unstyled">
+								<li><a href="#">Blocks</a></li>
+								<li class="sub-menu">
+									<ul class="list-unstyled">
+										<li><a href="#">Meta</a></li>
+										<li><a href="#">Ownership</a></li>
+										<li><a href="#">Attributes</a></li>
+										<li><a href="#">Embeds</a></li>
+										<li><a href="#">Signatures</a></li>
+									</ul>
+								</li>
+								{# <li><a href="#">Signing</a></li>
+								<li><a href="#">Verification</a></li> #}
+							</ul>
+						</li>
+					</ul>
+
+					<ul class="list-unstyled">
+						<li><a href="#">Libraries</a></li>
+						<li class="sub-menu">
+							<ul class="list-unstyled">
+								<li><a href="#">Go</a></li>
+								<li><a href="#">Javascript</a></li>
+							</ul>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+
+
+			<div class="content">
+				{{ intro | safe }}
+				{{ what_host | safe }}
+				{{ why_stone | safe }}
+				{{ address | safe }}
+				{{ issuer | safe }}
+				{{ blocks | safe }}
+				{{ meta | safe }}
+				{{ ownership | safe }}
+				{{ attributes | safe }}
+				{{ embeds | safe }}
+				{{ signatures | safe }}
+
+			</div>
+		</div>
+
+  		<!-- <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> -->
+  		<script src="/js/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" ></script>
+		<!-- <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js" crossorigin="anonymous"></script> -->
+		<script src="/js/bootstrap.js" crossorigin="anonymous"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+  	</body>
+</html>

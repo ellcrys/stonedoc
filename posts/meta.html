@@ -1,0 +1,37 @@
+<div class="header" id="meta-block">Meta Block</div>
+<div class="main-content">
+	
+	This is the header of a stone. It contains information about the
+	stone instance and it's issuer. 
+
+</div>
+
+<div class="codeblock">
+	<div class="title"><b>Structure of a meta block</b></div>
+	<div class="main-content" style="padding-top: 0px;">
+		<pre>
+			<code class="json">
+{
+   "id":			"jh88hg3sxn43isjhdg0jsdjie03cu3",
+   "type":  		"some-coupon",
+   "created_at": 	1458623859
+}
+			</code>
+		</pre>
+	</div>
+</div>
+
+<div class="main-content" style="padding-top: 0px;">
+	
+	<b>id</b> (string): This is the unique id of the stone. It must be a 40 characters long. Preferrable a 
+	SHA1 hash of a UUID. This is used by the host and the issuer to recognize a stone instance.
+	<br><br>
+
+	<b>type</b> (string): This is the unique name of the asset. The asset must be known to the host
+	to allow for proper verification.
+	<br><br>
+
+	<b>created_at</b> (number): A unix timestamp indicating when a stone instance was created.
+	<br><br>
+
+</div>
