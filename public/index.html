@@ -26,28 +26,28 @@
 						<li><a href="#">Introduction</a></li>
 						<li class="sub-menu">
 							<ul class="list-unstyled">
-								<li><a href="#">What is a Stone</a></li>
-								<li><a href="#">What is a Host</a></li>
-								<li><a href="#">Why Stone</a></li>
-								<li><a href="#">Address</a></li>
-								<li><a href="#">Issuer</a></li>
+								<li><a href="#what-is-a-stone">What is a Stone</a></li>
+								<li><a href="#what-is-a-host">What is a Host</a></li>
+								<li><a href="#why-stone">Why Stone</a></li>
+								<li><a href="#address">Address</a></li>
+								<li><a href="#issuer">Issuer</a></li>
 								
 							</ul>
 						</li>
 					</ul>
 
 					<ul class="list-unstyled">
-						<li><a href="#">Anatomy</a></li>
+						<li><a href="#blocks">Anatomy</a></li>
 						<li class="sub-menu">
 							<ul class="list-unstyled">
-								<li><a href="#">Blocks</a></li>
+								<li><a href="#blocks">Blocks</a></li>
 								<li class="sub-menu">
 									<ul class="list-unstyled">
-										<li><a href="#">Meta</a></li>
-										<li><a href="#">Ownership</a></li>
-										<li><a href="#">Attributes</a></li>
-										<li><a href="#">Embeds</a></li>
-										<li><a href="#">Signatures</a></li>
+										<li><a href="#meta-block">Meta</a></li>
+										<li><a href="#ownership-block">Ownership</a></li>
+										<li><a href="#attributes-block">Attributes</a></li>
+										<li><a href="#embeds-block">Embeds</a></li>
+										<li><a href="#signatures-block">Signatures</a></li>
 									</ul>
 								</li>
 								
@@ -70,10 +70,9 @@
 
 
 			<div class="content">
-				<div class="header">What is a Stone</div>
+				<div class="header" id="what-is-a-stone">What is a Stone</div>
 <div class="main-content">
-	A "stone" is a cryptographically signed peice of data that is used as an object of value in centralized transactional sytems.
-	It can be used to represent or store things of value. 
+	A "stone" is a cryptography object used to digitally represent or hold things of value in centralized transactional sytems.
 	<br> <br>
 
 	It is designed to be real, portable and easy to transfer through everyday messaging systems such as email,
@@ -315,7 +314,7 @@ pQMmJDeVFNOVRXcFFnc3I5NU1rIn0=
 	<br><br>
 
 </div>
-				<div class="header" id="ownership">Ownership Block</div>
+				<div class="header" id="ownership-block">Ownership Block</div>
 <div class="main-content">
 	This block contains information about the ownership of a stone instance. 
 	The host uses this block to store and determine ownership of an asset by associating 
@@ -365,7 +364,7 @@ pQMmJDeVFNOVRXcFFnc3I5NU1rIn0=
 	Only signatures signed with the private key of this address will be accepted by the host.
 
 </div>
-				<div class="header" id="attributes">Attributes Block</div>
+				<div class="header" id="attributes-block">Attributes Block</div>
 <div class="main-content">
 	
 	This is an optional block provided for issuers to include arbitrary data into 
@@ -451,7 +450,7 @@ pQMmJDeVFNOVRXcFFnc3I5NU1rIn0=
 	<br><br>
 
 </div>
-				<div class="header">Signatures Block</div>
+				<div class="header" id="signatures-block">Signatures Block</div>
 <div class="main-content">
 	The signatures block contains the JWS signatures of all the other blocks. The 
    base64 encoded string of this block is what gets transferred between users and
