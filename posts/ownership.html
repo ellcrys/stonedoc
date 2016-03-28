@@ -1,16 +1,18 @@
 <div class="header" id="ownership-block">Ownership Block</div>
 <div class="main-content">
-	This block contains information about the ownership of a stone instance. 
-	The host uses this block to store and determine ownership of an asset by associating 
-	the stone with an address hosted with it. 
+	This is an optional block containing information about the ownership of a stone instance. It is reserved 
+	for the host to store and determine ownership of an asset by associating 
+	the stone with an address known to it. 
 	<br> <br>
 
 	Only the address owner who has access to the address's private
-	key can authorize transactions against a stone belonging to it's address.
+	key can authorize transactions against a stone belonging to their address.
 	<br><br>
 
-	This block is optional. Only required when a host is needed to manage asset
-	ownership. Otherwise, issuers can simply transfer unowned stones.
+	A stone without ownership information will be consider to be 
+	an <i>unowned</i> asset by a host. Such an asset can be freely transferred by anyone
+	to any address within the host.  
+
 </div>
 
 <div class="codeblock">
@@ -32,19 +34,22 @@
 
 <div class="main-content" style="padding-top: 0px;">
 	
-	<b>ref_id</b> (string): This is the id of the stone (<code>meta.id</code>) where the ownership block
-	is included. If the value is not the equal to <code>meta.id</code>, the block is considered invalid.
+	<b>ref_id</b> (type: string, required: yes): This is the id of the stone where the ownership block
+	is included. If the value is not equal to <code class="font-green">meta.id</code>, the block is considered invalid.
 	<br><br>
 
-	<b>type</b> (string): This is the type of ownership. Only sole ownership is currently supported.
+	<b>type</b> (type: string, required: yes): 
+	This is the type of ownership. Only sole ownership is currently supported.
 	Expected value should be <code>sole</code>.
 	<br><br>
 
-	<b>sole</b> (object): Optional. This object contains information about the address that owns 
+	<b>sole</b> (type: object, required: no): 
+	Optional. This object contains information about the address that owns 
 	the stone. This is required when <code>ownership.type</code> is set to <code>sole</code>.
 	<br><br>
 
-	<b>sole.address_id</b> (string): This is the address id associated with the stone instance. 
+	<b>sole.address_id</b> (type: string, required: yes): 
+	This is the address id associated with the stone instance. 
 	Only signatures signed with the private key of this address will be accepted by the host.
 
 </div>

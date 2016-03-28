@@ -23,15 +23,18 @@
 
 <div class="main-content" style="padding-top: 0px;">
 	
-	<b>id</b> (string): This is the unique id of the stone. It must be a 40 characters long. Preferrable a 
+	<b>id</b> (type: string, required: yes): 
+	This is the unique id of the stone. It must be a 40 characters long. Preferrable a 
 	SHA1 hash of a UUID. This is used by the host and the issuer to recognize a stone instance.
 	<br><br>
 
-	<b>type</b> (string): This is the unique name of the asset. The asset must be known to the host
+	<b>type</b> (type: string, required: yes): 
+	This is the unique name of the asset. The asset must be known to the host
 	to allow for proper verification.
 	<br><br>
 
-	<b>created_at</b> (number): A unix timestamp indicating when a stone instance was created.
+	<b>created_at</b> (type: number, required: yes): 
+	A unix timestamp indicating when a stone instance was created.
 	<br><br>
 
 </div>

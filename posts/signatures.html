@@ -1,10 +1,15 @@
 <div class="header" id="signatures-block">Signatures Block</div>
 <div class="main-content">
-	The signatures block contains the JWS signatures of all the other blocks. The 
-   base64 encoded string of this block is what gets transferred between users and
-   applications. The benefit of using JWS for signing is the ability to rebuild a
-   stone's JSON object from the signature. A stone will be considered invalid if
-   a block's signature could not be verified. 
+	The signatures block contains the JWS signature/token of all the other blocks. The 
+   final stone token is the base64 encoded string of the signature block. 
+   <br><br>
+
+   The benefit of using JWS for signing is the conveniece of rebuilding the full
+   stone's object from the encoded payload in the token. 
+   <br><br>
+
+   A stone will be considered invalid if a block's signature could not be verified using 
+   the issuer or host private keys. 
 </div>
 
 <div class="codeblock">

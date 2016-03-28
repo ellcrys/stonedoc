@@ -56,11 +56,11 @@
 					</ul>
 
 					<ul class="list-unstyled">
-						<li><a href="#">Libraries</a></li>
+						<li><a href="#libraries">Libraries</a></li>
 						<li class="sub-menu">
 							<ul class="list-unstyled">
-								<li><a href="https://github.com/stonedoc/stone">Go</a></li>
-								<li><a href="https://github.com/stonedoc/node-stone">Javascript</a></li>
+								<li><a href="#go-library">Go</a></li>
+								<li><a href="#js-library">Javascript</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -72,18 +72,17 @@
 			<div class="content">
 				<div class="header" id="what-is-a-stone">What is a Stone</div>
 <div class="main-content">
-	A "stone" is a cryptography object used to digitally represent or hold things of value in centralized transactional sytems.
+	A "stone" is a cryptography object used to digitally represent or hold things of value in a centralized transaction engine.
 	<br> <br>
 
-	It is designed to be real, portable and easy to transfer through everyday messaging systems such as email,
-	sms, whatsapp etc.
+	It is designed to be tangible, verifiable and easy to transfer through traditional messaging systems such as email.
 	
 	<br> <br>
 	Some examples of 
 	assets and valuables that can be represented or stored in a stone includes: 
 	<br><br>
 	<ul>
-		<li>Digital money</li>
+		<li>Digital currencies</li>
 		<li>Coupons</li>
 		<li>Vouchers</li>
 		<li>Tickets</li>
@@ -96,8 +95,9 @@
 	</ul>
 	<br>
 
-	A stone is made up of 5 parts known as <b>blocks</b>. They are <b>meta</b>, <b>ownership</b>, <b>attributes</b>, <b>embeds</b>
-	and <b>signatures</b> blocks. All blocks are signed using <a href="https://tools.ietf.org/html/rfc7515">JSON Web Signature</a> 
+	A stone is made up of 5 parts known as blocks. They are named <b>meta</b>, <b>ownership</b>, <b>attributes</b>, <b>embeds</b>
+	and <b>signatures</b>. Blocks separates information so that they can be signed by different parties independently.
+	Blocks are signed using the <a href="https://tools.ietf.org/html/rfc7515">JSON Web Signature</a> 
 	standards with RSA-SHA256 algorithm.
 </div>
 
@@ -105,25 +105,16 @@
 	<div class="title"><b>Below is an example of a stone</b></div>
 	<div class="main-content" style="padding-top: 0px;">
 		<pre><code class="bash">
-eyJtZXRhIjoiZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXAzYXlJNmV5SnJkSGtpT2lKU1UwRW
-lMQ0p1SWpvaU1VRk5SV2c1Vm1sWVJtVjVVRGRHVDAxUFpVRlVWMEpTT0VsTU5tTlpiRFZL
-YW5kM05VSkplRk10ZG1sNWJDMVBjV0pDU0VoRlgwSkZNR1V6Y0hobFRuRnJURlprTkdoaE
-4xTTBkREJoTFZWTVUwUjNaRzVKZDBWeFFUYzFSVVV0TURWaFlrUjRkVlZvZVZJMmFHWjFOR
-2N6VlhSMVVtcEZabGh4UVRkaWQyVXdPR2RhVGtGa1ZXOHdhbTFEU1hNNGVqTXlTVWhTWVVO
-S1pqRmZUbWRSY2xWR1V6bHpXamRIYldkaklpd2laU0k2SWtGUlFVSWlmWDAuZXlKamNtVmh
-kR1ZrWDJGMElqb3hORFUzTkRReE56Y3dMQ0pwWkNJNklqUmlZVE0wTkROaU5qRTFOemMxTT
-JaaU5qYzRZVFU1TTJVMVpEYzJPRFJqT0RSa01XSXlNRGNpTENKMGVYQmxJam9pWTNWeWNtV
-nVZM2tpZlEuTnlENFdOMXltZHBnWTAzMi1ZekI2T0FNMW5weUhaaXdxZVp0YXFYMkQ1ZkFS
-OUlsYjVCQ09MbFdDajdnRHZnZkdYbDdfbmlLSXB0NHIzR3dTV0Q0djR1a19GWjVDeDZOc19
-ZRTBQTjl2R1drSUJmSDlTcWFKR0JGTDVDUGVnQ3JLYUZvM2dmTU1DZS0yZUNsc0dUTkp5dm
-pQMmJDeVFNOVRXcFFnc3I5NU1rIn0=
+eyJtZXRhIjoiZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXAzYXlJNmV5SnJkSGtpT2lKU1UwRWlMQ0p1SWpvaU1VRk5SV2c1Vm1sWVJtVjVVRGRHVDAxUFpVRlVWMEpTT0VsTU5tTlpiRFZLYW5kM05VSkplRk10ZG1sNWJDMVBjV0pDU0VoRlgwSkZNR1V6Y0hobFRuRnJURlprTkdoaE
+4xTTBkREJoTFZWTVUwUjNaRzVKZDBWeFFUYzFSVVV0TURWaFlrUjRkVlZvZVZJMmFHWjFOR2N6VlhSMVVtcEZabGh4UVRkaWQyVXdPR2RhVGtGa1ZXOHdhbTFEU1hNNGVqTXlTVWhTWVVOS1pqRmZUbWRSY2xWR1V6bHpXamRIYldkaklpd2laU0k2SWtGUlFVSWlmWDAuZXlKamNtVmh
+kR1ZrWDJGMElqb3hORFUzTkRReE56Y3dMQ0pwWkNJNklqUmlZVE0wTkROaU5qRTFOemMxTTJaaU5qYzRZVFU1TTJVMVpEYzJPRFJqT0RSa01XSXlNRGNpTENKMGVYQmxJam9pWTNWeWNtVnVZM2tpZlEuTnlENFdOMXltZHBnWTAzMi1ZekI2T0FNMW5weUhaaXdxZVp0YXFYMkQ1ZkFS
+OUlsYjVCQ09MbFdDajdnRHZnZkdYbDdfbmlLSXB0NHIzR3dTV0Q0djR1a19GWjVDeDZOc19ZRTBQTjl2R1drSUJmSDlTcWFKR0JGTDVDUGVnQ3JLYUZvM2dmTU1DZS0yZUNsc0dUTkp5dmpQMmJDeVFNOVRXcFFnc3I5NU1rIn0=
 	</code></pre>
 	</div>
 </div>
 
 <div class="main-content" style="padding-top: 0px;">
-	Data stored within a stone is signed by it <a href="#issuer">issuer</a>. It cannot be altered without
-	the authorization of the issuer.
+	Data stored within a stone is signed by an <a href="#issuer">issuer</a> and a <a href="#host">host</a>.
 	<br><br>
 </div>
 
@@ -134,17 +125,16 @@ pQMmJDeVFNOVRXcFFnc3I5NU1rIn0=
 	<br> <br>
 
 	The host makes use of the <a href="/#ownership-block">ownership</a> block to describe and determine 
-	ownership of a given stone. 
-	As the only block accessible to the host, it can modify it, sign it and return a newly updated
-	Stone. 
+	ownership of a given stone. It can modify it, sign it and return a newly updated Stone. 
 	<br><br> 
 
-	<a href="#issuers">Issuers</a> of assets that do not require a central body to manage ownership or 
-	prefers to manage ownership themselves can ignore the <a href="/#ownership-block">ownership</a> block and a host.
+	<a href="#issuers">Issuers</a> of assets that do not require a third-party to manage 
+	ownership can ignore the <a href="/#ownership-block">ownership</a> block. In this case, they would
+	have to provide another mechanism to manage ownership of their assets.
 	<br> <br> 
 	
 	The host must provide endpoints to receive and respond to commands from clients for basic operations like
-	asset type creation, address creation, ownership change and verification, global stone locking, stone verification 
+	asset type creation, address creation, ownership change and verification, global asset locking, stone verification 
 	and public key retrieval.
 	<br> <br> 
 
@@ -155,7 +145,7 @@ pQMmJDeVFNOVRXcFFnc3I5NU1rIn0=
 
 	As the world becomes more and more digital, the need for efficient systems to 
 	allow for quick, easy and safe transfer of digital assets is increasing in demand. This has lead to
-	the development of truly innovative technologies such as Bitcoin, Stellar, Ripple, Nxt and many more.
+	the development of innovative technologies such as Bitcoin, Stellar, Ripple, Nxt and many more.
 	<br><br>
 
 	Many of these new technologies strive to be decentralized and trust-less at expense of cheap
@@ -198,8 +188,8 @@ pQMmJDeVFNOVRXcFFnc3I5NU1rIn0=
 	from the host. 
 	<br><br>
 
-	Issuers are responsible for signing the meta, attributes 
-	and embeds blocks. 
+	Issuers are responsible for signing the <i>meta</i>, <i>attributes</i> 
+	and <i>embeds</i> blocks. 
 </div>
 
 				<div class="header" id="blocks">Blocks</div>
@@ -244,7 +234,7 @@ pQMmJDeVFNOVRXcFFnc3I5NU1rIn0=
 	<br><br>
 
 	<b>Embeds</b>: To support complex stones, this block allows the issuer
-	to include one or more stones inside of a stone. This is suitable for assets that 
+	to include one or more stones inside of another stone. This is suitable for assets that 
 	also come with additional assets. This block must be signed by the issuer.
 	<br><br>
 
@@ -302,31 +292,36 @@ pQMmJDeVFNOVRXcFFnc3I5NU1rIn0=
 
 <div class="main-content" style="padding-top: 0px;">
 	
-	<b>id</b> (string): This is the unique id of the stone. It must be a 40 characters long. Preferrable a 
+	<b>id</b> (type: string, required: yes): 
+	This is the unique id of the stone. It must be a 40 characters long. Preferrable a 
 	SHA1 hash of a UUID. This is used by the host and the issuer to recognize a stone instance.
 	<br><br>
 
-	<b>type</b> (string): This is the unique name of the asset. The asset must be known to the host
+	<b>type</b> (type: string, required: yes): 
+	This is the unique name of the asset. The asset must be known to the host
 	to allow for proper verification.
 	<br><br>
 
-	<b>created_at</b> (number): A unix timestamp indicating when a stone instance was created.
+	<b>created_at</b> (type: number, required: yes): 
+	A unix timestamp indicating when a stone instance was created.
 	<br><br>
 
 </div>
 				<div class="header" id="ownership-block">Ownership Block</div>
 <div class="main-content">
-	This block contains information about the ownership of a stone instance. 
-	The host uses this block to store and determine ownership of an asset by associating 
-	the stone with an address hosted with it. 
+	This is an optional block containing information about the ownership of a stone instance. It is reserved 
+	for the host to store and determine ownership of an asset by associating 
+	the stone with an address known to it. 
 	<br> <br>
 
 	Only the address owner who has access to the address's private
-	key can authorize transactions against a stone belonging to it's address.
+	key can authorize transactions against a stone belonging to their address.
 	<br><br>
 
-	This block is optional. Only required when a host is needed to manage asset
-	ownership. Otherwise, issuers can simply transfer unowned stones.
+	A stone without ownership information will be consider to be 
+	an <i>unowned</i> asset by a host. Such an asset can be freely transferred by anyone
+	to any address within the host.  
+
 </div>
 
 <div class="codeblock">
@@ -348,27 +343,30 @@ pQMmJDeVFNOVRXcFFnc3I5NU1rIn0=
 
 <div class="main-content" style="padding-top: 0px;">
 	
-	<b>ref_id</b> (string): This is the id of the stone (<code>meta.id</code>) where the ownership block
-	is included. If the value is not the equal to <code>meta.id</code>, the block is considered invalid.
+	<b>ref_id</b> (type: string, required: yes): This is the id of the stone where the ownership block
+	is included. If the value is not equal to <code class="font-green">meta.id</code>, the block is considered invalid.
 	<br><br>
 
-	<b>type</b> (string): This is the type of ownership. Only sole ownership is currently supported.
+	<b>type</b> (type: string, required: yes): 
+	This is the type of ownership. Only sole ownership is currently supported.
 	Expected value should be <code>sole</code>.
 	<br><br>
 
-	<b>sole</b> (object): Optional. This object contains information about the address that owns 
+	<b>sole</b> (type: object, required: no): 
+	Optional. This object contains information about the address that owns 
 	the stone. This is required when <code>ownership.type</code> is set to <code>sole</code>.
 	<br><br>
 
-	<b>sole.address_id</b> (string): This is the address id associated with the stone instance. 
+	<b>sole.address_id</b> (type: string, required: yes): 
+	This is the address id associated with the stone instance. 
 	Only signatures signed with the private key of this address will be accepted by the host.
 
 </div>
 				<div class="header" id="attributes-block">Attributes Block</div>
 <div class="main-content">
 	
-	This is an optional block provided for issuers to include arbitrary data into 
-	the stone. Data included can be of any JSON data type. This block must be
+	This is an optional block reserved for issuers to include arbitrary data relevant
+	to their applications. Data included can be of any JSON data type. This block must be
 	signed by the isser of the asset.
 
 </div>
@@ -389,12 +387,12 @@ pQMmJDeVFNOVRXcFFnc3I5NU1rIn0=
 
 <div class="main-content" style="padding-top: 0px;">
 	
-	<b>ref_id</b> (string): This is the id of the stone (<code>meta.id</code>) where the ownership block
-	is included. If the value is not the equal to <code>meta.id</code>, the block is considered invalid.
+	<b>ref_id</b> (type: string, required: yes): This is the id of the stone where the ownership block
+	is included. If the value is not equal to <code class="font-green">meta.id</code>, the block is considered invalid.
 	<br><br>
 
-	<b>data</b> (any): This field holds any issuer data. The value type can be
-	string, number, JSON object or an array.
+	<b>data</b> (type: object, required: yes): This field holds the issuer's application specific data. The value type can be
+	string, number, object or an array.
 	<br><br>
 
 </div>
@@ -442,21 +440,28 @@ pQMmJDeVFNOVRXcFFnc3I5NU1rIn0=
 
 <div class="main-content" style="padding-top: 0px;">
 	
-	<b>ref_id</b> (string): This is the id of the stone (<code>meta.id</code>) where the ownership block
-	is included. If the value is not the equal to <code>meta.id</code>, the block is considered invalid.
+	<b>ref_id</b> (type: string, required: yes): This is the id of the stone where the ownership block
+	is included. If the value is not equal to <code class="font-green">meta.id</code>, the block is considered invalid.
 	<br><br>
 
-	<b>data</b> (array): This must contain valid stone objects only. 
+	<b>data</b> (type: array, required: yes):
+	This must contain a list of valid stone objects. If an invalid stone is included,
+	the stone is considered invalid. 
 	<br><br>
 
 </div>
 				<div class="header" id="signatures-block">Signatures Block</div>
 <div class="main-content">
-	The signatures block contains the JWS signatures of all the other blocks. The 
-   base64 encoded string of this block is what gets transferred between users and
-   applications. The benefit of using JWS for signing is the ability to rebuild a
-   stone's JSON object from the signature. A stone will be considered invalid if
-   a block's signature could not be verified. 
+	The signatures block contains the JWS signature/token of all the other blocks. The 
+   final stone token is the base64 encoded string of the signature block. 
+   <br><br>
+
+   The benefit of using JWS for signing is the conveniece of rebuilding the full
+   stone's object from the encoded payload in the token. 
+   <br><br>
+
+   A stone will be considered invalid if a block's signature could not be verified using 
+   the issuer or host private keys. 
 </div>
 
 <div class="codeblock">
@@ -473,6 +478,20 @@ pQMmJDeVFNOVRXcFFnc3I5NU1rIn0=
 			</code>
 		</pre>
 	</div>
+</div>
+				<div class="header" id="libraries">Issuer</div>
+<div class="main-content">
+	We have developed libraries to help simplify creation, modification,
+	signing and verification of stone objects. <br><br>
+
+	<a id="js-library" href="https://github.com/stonedoc/node-stone">node-stone</a> - Javascript library for stones<br>
+	<a id="go-library" href="https://github.com/stonedoc/stone">stone</a> - Golang library
+</div>
+
+				<div class="header" id="contact">Contact</div>
+<div class="main-content">
+	Wanna share some ideas? Feel free to email me at kennedyidialu [at] gmail [dot] com
+	or <a href="http://twitter.com/ncodes">@ncodes</a>
 </div>
 
 			</div>

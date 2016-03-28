@@ -57,11 +57,11 @@
 					</ul>
 
 					<ul class="list-unstyled">
-						<li><a href="#">Libraries</a></li>
+						<li><a href="#libraries">Libraries</a></li>
 						<li class="sub-menu">
 							<ul class="list-unstyled">
-								<li><a href="https://github.com/stonedoc/stone">Go</a></li>
-								<li><a href="https://github.com/stonedoc/node-stone">Javascript</a></li>
+								<li><a href="#go-library">Go</a></li>
+								<li><a href="#js-library">Javascript</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -82,7 +82,8 @@
 				{{ attributes | safe }}
 				{{ embeds | safe }}
 				{{ signatures | safe }}
-
+				{{ libraries | safe }}
+				{{ contact | safe }}
 			</div>
 		</div>
 

@@ -42,11 +42,13 @@
 
 <div class="main-content" style="padding-top: 0px;">
 	
-	<b>ref_id</b> (string): This is the id of the stone (<code>meta.id</code>) where the ownership block
-	is included. If the value is not the equal to <code>meta.id</code>, the block is considered invalid.
+	<b>ref_id</b> (type: string, required: yes): This is the id of the stone where the ownership block
+	is included. If the value is not equal to <code class="font-green">meta.id</code>, the block is considered invalid.
 	<br><br>
 
-	<b>data</b> (array): This must contain valid stone objects only. 
+	<b>data</b> (type: array, required: yes):
+	This must contain a list of valid stone objects. If an invalid stone is included,
+	the stone is considered invalid. 
 	<br><br>
 
 </div>

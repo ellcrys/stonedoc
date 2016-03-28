@@ -52,13 +52,14 @@
 .content .main-content {
   width: 700px;
   color: #333333;
-  line-height: 18px;
+  line-height: 20px;
   font-size: 16px;
   font-weight: 300;
   padding: 10px;
   padding-top: 20px;
   margin: auto;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
+  font-family: 'Roboto Slab', serif;
 }
 .content .codeblock {
   padding-top: 15px;
@@ -81,4 +82,7 @@ pre {
 pre code {
   font-family: 'Source Code Pro';
   border-radius: 5px;
+}
+.font-green {
+  color: #568c3b;
 }
